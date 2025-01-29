@@ -11,8 +11,6 @@ configuration:
       type: string
     host:
       type: string
-    audience:
-      type: string
     lifetime:
       type: string
   required:
