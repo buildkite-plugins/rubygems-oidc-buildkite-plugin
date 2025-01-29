@@ -59,7 +59,7 @@ Example: `https://example.com`
 
 ### `audience` (optional, string)
 
-The audience to use when requesting an OIDC token from Buildkite. Defaults to `https://rubygems.org` and typically won't need to be customised.
+The audience to use when requesting an OIDC token from Buildkite. Defaults to `rubygems.org` and typically won't need to be customised.
 
 Example: `example.com`
 
