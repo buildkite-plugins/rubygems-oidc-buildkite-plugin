@@ -12,7 +12,7 @@ Basic usage, which requires the `gem` command to be available in the agent envir
 steps:
 - label: ":rubygems: Build and push to Rubygems"
   plugins:
-  - rubygems-oidc:
+  - rubygems-oidc#v0.1.0:
       role: rg_oidc_akr_...
   command: |
     gem build "*.gemspec"
@@ -25,7 +25,7 @@ If the `gem` command is not available on the agents, this plugin can be combined
 steps:
 - label: ":rubygems: Build and push to Rubygems"
   plugins:
-    - rubygems-oidc:
+    - rubygems-oidc#v0.1.0:
         role: "rg_oidc_akr_..."
     - docker#v5.12.0:
         image: "ruby:slim"
