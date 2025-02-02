@@ -1,0 +1,19 @@
+name: rubygems-oidc
+description: Exchange a Buildkite OIDC token with rubygems.org via an OIDC API Key Role, to securely push Rubygems from your Buildkite pipelines 
+author: https://github.com/buildkite-plugins
+public: true
+requirements:
+  - bash
+  - jq
+configuration:
+  properties:
+    role:
+      type: string
+    host:
+      type: string
+    audience:
+      type: string
+    lifetime:
+      type: string
+  required:
+    - role
