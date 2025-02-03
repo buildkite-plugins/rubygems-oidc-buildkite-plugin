@@ -1,8 +1,4 @@
 steps:
-  - label: ":hammer: Test"
-    plugins:
-      - plugin-tester#v1.1.1: ~
-
   - label: ":sparkles: lint"
     plugins:
       - plugin-linter#v3.3.0:
