@@ -57,12 +57,6 @@ The hostname to use when requesting a temporary API token from rubygems. Default
 
 Example: `https://example.com`
 
-### `audience` (optional, string)
-
-The audience to use when requesting an OIDC token from Buildkite. Defaults to `https://rubygems.org` and typically won't need to be customised.
-
-Example: `example.com`
-
 ### `lifetime` (optional, string)
 
 The number of seconds the requested Buildkite OIDC token will be valid for. Defaults to 60 seconds.

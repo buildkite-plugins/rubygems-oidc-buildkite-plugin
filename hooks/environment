@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+AUDIENCE="rubygems.org"
+
 if [ -z "${RUBYGEMS_HOST:-}" ]; then
   RUBYGEMS_HOST="https://rubygems.org"
 fi
@@ -17,12 +19,6 @@ fi
 
 HOST="${BUILDKITE_PLUGIN_RUBYGEMS_OIDC_HOST}"
 ROLE="${BUILDKITE_PLUGIN_RUBYGEMS_OIDC_ROLE}"
-
-if [ -z "${BUILDKITE_PLUGIN_RUBYGEMS_OIDC_AUDIENCE:-}" ]; then
-  AUDIENCE="${HOST}"
-else
-  AUDIENCE="${BUILDKITE_PLUGIN_RUBYGEMS_OIDC_AUDIENCE}"
-fi
 
 if [ -z "${BUILDKITE_PLUGIN_RUBYGEMS_OIDC_LIFETIME:-}" ]; then
   LIFETIME="60"
