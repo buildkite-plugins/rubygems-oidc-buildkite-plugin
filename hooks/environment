@@ -48,7 +48,7 @@ if ! jq -e . >/dev/null 2>&1 <<<"${RESPONSE}"; then
 fi
 
 ERROR_MESSAGE=$(echo "${RESPONSE}" | jq -r .error)
-GEM_HOST_API_KEY==$(echo "${RESPONSE}" | jq -r .rubygems_api_key)
+GEM_HOST_API_KEY=$(echo "${RESPONSE}" | jq -r .rubygems_api_key)
 
 if [ "${ERROR_MESSAGE}" != "null" ]; then
   echo "Requesting API token failed"
