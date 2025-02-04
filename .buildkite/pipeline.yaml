@@ -1,0 +1,10 @@
+steps:
+  - label: ":sparkles: lint"
+    plugins:
+      - plugin-linter#v3.3.0:
+          id: rubygems-oidc
+
+  - label: ":shell: Shellcheck"
+    plugins:
+      - shellcheck#v1.3.0:
+          files: hooks/**
