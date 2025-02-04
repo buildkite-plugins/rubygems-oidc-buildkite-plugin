@@ -13,7 +13,7 @@ if [ -z "${BUILDKITE_PLUGIN_RUBYGEMS_OIDC_HOST:-}" ]; then
 fi
 
 if [ -z "${BUILDKITE_PLUGIN_RUBYGEMS_OIDC_ROLE:-}" ]; then
-  echo "required `role` plugin parameter not found"
+  echo "required 'role' plugin parameter not found"
   exit 1
 fi
 
@@ -28,7 +28,8 @@ fi
 
 echo "--- Request Buildkite OIDC token"
 
-export BUILDKITE_OIDC_TOKEN="$(buildkite-agent oidc request-token --audience "${AUDIENCE}" --lifetime "${LIFETIME}")"
+BUILDKITE_OIDC_TOKEN="$(buildkite-agent oidc request-token --audience "${AUDIENCE}" --lifetime "${LIFETIME}")"
+export BUILDKITE_OIDC_TOKEN
 
 echo "--- Request Rubygems API token"
 
